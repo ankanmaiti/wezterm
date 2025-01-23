@@ -1,13 +1,21 @@
 -- Pull in the wezterm API
 local wezterm = require 'wezterm'
+local platform = "linux"
 
 -- This will hold the configuration.
 local config = wezterm.config_builder()
+if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
+  platform = "windows"
+elseif wezterm.target_triple == 'x86_64-apple-darwin' then
+  platform = "apple-intel"
+elseif wezterm.target_triple == 'aarch64-apple-darwin' then
+  platform = "apple-silicon"
+end
 
 -- This is where you actually apply your config choices
 
 config.automatically_reload_config = true
-config.default_prog = {"C:\\Program Files\\Git\\bin\\bash.exe", "-li"}
+config.default_prog = platform == "windows" and {"C:\\Program Files\\Git\\bin\\bash.exe", "-li"} or { "top" }
 
 -- UI
 config.color_scheme = 'Catppuccin Mocha'
