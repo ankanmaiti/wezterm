@@ -18,6 +18,7 @@ config.automatically_reload_config = true
 config.default_prog = platform == "windows" and {"C:\\Program Files\\Git\\bin\\bash.exe", "-li"} or { "top" }
 
 -- UI
+config.max_fps = 120 -- this should not cause any problem for lower fps devices
 config.color_scheme = 'Vs Code Dark+ (Gogh)'
 config.enable_tab_bar = false
 -- config.window_decorations = "RESIZE" -- bug in window10
