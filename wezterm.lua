@@ -24,6 +24,11 @@ config.enable_tab_bar = false
 config.window_close_confirmation = 'NeverPrompt'
 config.default_cursor_style = 'SteadyBlock'
 
+-- Font
+config.font = wezterm.font 'JetBrains Mono'
+config.font_size = 11
+config.line_height = 1.2
+
 -- Smooth cursor movement configuration
 config.cursor_blink_rate = 0  -- Disable blinking
 config.cursor_blink_ease_in = 'Linear'
