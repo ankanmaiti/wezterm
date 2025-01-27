@@ -14,6 +14,7 @@ end
 
 -- This is where you actually apply your config choices
 
+-- Core
 config.automatically_reload_config = true
 config.default_prog = platform == "windows" and {"C:\\Program Files\\Git\\bin\\bash.exe", "-li"} or { "top" }
 
@@ -21,7 +22,6 @@ config.default_prog = platform == "windows" and {"C:\\Program Files\\Git\\bin\\b
 config.max_fps = 120 -- this should not cause any problem for lower fps devices
 config.color_scheme = 'Vs Code Dark+ (Gogh)'
 config.enable_tab_bar = false
--- config.window_decorations = "RESIZE" -- bug in window10
 config.window_close_confirmation = 'NeverPrompt'
 config.default_cursor_style = 'SteadyBlock'
 
